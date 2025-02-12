@@ -48,42 +48,57 @@ cat /usr/local/var/lib/tor/hidden_service/hostname
 ### 📌 Usage
 
 1️⃣ Start a Hidden Web Server
+```bash
 nohup python3 -m http.server 8080 > /dev/null 2>&1 &
+```
 Access it via:
-
+```bash
 http://yourgenerated.onion
+```
 2️⃣ Secure SSH Connection Over Tor
+```bash
 torsocks ssh -i ~/.ssh/covert_key user@yourgenerated.onion
+```
 3️⃣ Hide & Extract Messages Using Steganography
 Embed a Message:
-
+```bash
 steghide embed -cf secret_image.jpg -ef message.txt -p "password"
+```
 Extract the Message:
-
+```bash
 steghide extract -sf secret_image.jpg -p "password"
+```
 4️⃣ Encrypt & Decrypt Files
 Encrypt a file:
-
+```bash
 gpg --symmetric --cipher-algo AES256 secret.txt
+```
 Decrypt a file:
-
+```bash
 gpg --decrypt secret.txt.gpg
-📌 Security & Maintenance
+```
+### 📌 Security & Maintenance
 
 1️⃣ Disable System Logs
+```bash
 sudo rm -rf /var/log/*
 sudo ln -s /dev/null /var/log/syslog
+```
 2️⃣ Monitor Anonymity
+```bash
 netstat -an | grep 9050
 nmap -sS -T4 -Pn localhost
+```
 3️⃣ Automate Persistence
 Add services to crontab:
-
+```bash
 crontab -e
+```
 Add:
-
+```bash
 @reboot tor
 @reboot nohup python3 -m http.server 8080 > /dev/null 2>&1 &
-📌 Conclusion
+```
+### 📌 Conclusion
 
 This project creates a fully covert, decentralized, and secure messaging system using anonymous Tor routing, encryption, and steganography. It is designed to stay online, resist surveillance, and protect user privacy.
