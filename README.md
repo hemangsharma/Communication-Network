@@ -1,18 +1,20 @@
 # Communication-Network
 ## Covert Communication Network on macOS Terminal
 
-### 📌 Business & Product Understanding
+### Business & Product Understanding
 
-### 🔹 Overview
+#### 🔹 Overview
 This project provides a covert, secure, and decentralized communication network using Tor, SSH tunneling, steganography, and encryption. The goal is to enable private messaging and file sharing while ensuring infrastructure uptime and security.
 
-### 🔹 Use Cases
+#### 🔹 Use Cases
 - Secure communication in high-surveillance environments
 - Anonymous file sharing via Tor hidden services
 - End-to-end encrypted messaging without third-party interference
 - Covert data transmission using steganography
 
-### 📌 Features
+--- 
+
+### Features
 
 - ✅ Tor Hidden Service – Anonymous communication channel
 - ✅ SSH over Tor – Secure encrypted access
@@ -20,7 +22,9 @@ This project provides a covert, secure, and decentralized communication network 
 - ✅ Persistent Infrastructure – Services restart after reboot
 - ✅ Encryption – AES-256 encryption for files
 
-### 📌 Installation
+--- 
+
+### Installation
 
 1️⃣ Install Dependencies
 Run the following command in macOS Terminal:
@@ -45,7 +49,10 @@ Retrieve your .onion address:
 ```bash
 cat /usr/local/var/lib/tor/hidden_service/hostname
 ```
-### 📌 Usage
+
+--- 
+
+### Usage
 
 1️⃣ Start a Hidden Web Server
 ```bash
@@ -77,7 +84,10 @@ Decrypt a file:
 ```bash
 gpg --decrypt secret.txt.gpg
 ```
-### 📌 Security & Maintenance
+
+--- 
+
+### Security & Maintenance
 
 1️⃣ Disable System Logs
 ```bash
@@ -99,6 +109,8 @@ Add:
 @reboot tor
 @reboot nohup python3 -m http.server 8080 > /dev/null 2>&1 &
 ```
-### 📌 Conclusion
+--- 
+
+### Conclusion
 
 This project creates a fully covert, decentralized, and secure messaging system using anonymous Tor routing, encryption, and steganography. It is designed to stay online, resist surveillance, and protect user privacy.
